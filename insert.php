@@ -1,8 +1,15 @@
 <?php
 $url = "127.0.0.1";
-$user = "root";
-$password = "mypassword";
+$user = "basic";
+$password = "basic";
 $db = "pet_test";
+
+$name = $_POST['name'];
+$owner = $_POST['owner'];
+$species = $_POST['species'];
+$sex = $_POST['sex'];
+$birth = $_POST['birth'];
+$death = $_POST['death'];
 
 /* Attempt MySQL server connection. Assuming you are running MySQL
 server with default setting (user 'root' with no password) */
@@ -14,7 +21,7 @@ if($link === false){
 }
  
 // Attempt insert query execution
-$sql = "INSERT INTO pet (name, owner, species, sex, birth, death) VALUES ('Maucka', 'Andor', 'Siamese Cat', 'm', '2017-03-01', '2021.03.28')";
+$sql = "INSERT INTO pet (name, owner, species, sex, birth, death) VALUES ('{$name}', '{$owner}', '{$species}', '{$sex}', '{$birth}', '{$death}')";
 if(mysqli_query($link, $sql)){
     echo "Records inserted successfully.";
 } else{
@@ -23,4 +30,5 @@ if(mysqli_query($link, $sql)){
  
 // Close connection
 mysqli_close($link);
+
 ?>
