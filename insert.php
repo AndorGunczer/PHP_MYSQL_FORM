@@ -11,7 +11,7 @@ $db = "pet_test";
 $name = $_POST['name'];
 $owner = $_POST['owner'];
 $species = $_POST['species'];
-$sex = $_POST['sex'];
+$gender = $_POST['gender'];
 $birth = $_POST['birth'];
 $death = $_POST['death'];
 
@@ -26,7 +26,7 @@ if($link === false){
  
 // Attempt insert query execution
 // Versuch der Ausführung einer Insert-Abfrage
-$sql = "INSERT INTO pet (name, owner, species, sex, birth, death) VALUES ('{$name}', '{$owner}', '{$species}', '{$sex}', '{$birth}', '{$death}')";
+$sql = "INSERT INTO pet (name, owner, species, gender, birth, death) VALUES ('{$name}', '{$owner}', '{$species}', '{$gender}', '{$birth}', '{$death}')";
 if(mysqli_query($link, $sql)){
     echo "Records inserted successfully.";
 } else{

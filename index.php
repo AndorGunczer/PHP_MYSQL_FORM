@@ -28,8 +28,8 @@
                 <input type="text" name="species" id="species" required>
                 <br/>
 
-                <label for="sex">Sex </label>
-                <input type="text" name="sex" id="sex" required>
+                <label for="gender">Gender </label>
+                <input type="text" name="gender" id="gender" required>
                 <br/>
 
                 <label for="birth">Date of Brith </label>
