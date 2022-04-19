@@ -1,0 +1,40 @@
+body {
+    background-color: rgba(245, 245, 245);
+    font-family: "Lobster", cursive;
+}
+
+input {
+    display: block;
+    width: 80%;
+    margin: 5px 10%;
+    height: 2.2em;
+    border-radius: 3px;
+    opacity: 60%;
+}
+
+label {
+    margin-left: 10%;
+    font-size: 1.2em;
+}
+
+button {
+    display: block;
+    width: 20%;
+    margin: 0 auto;
+}
+
+h1 {
+    margin: 20px 0;
+    text-align: center;
+}
+
+div.container {
+    width: 30%;
+    /* display: block; */
+    margin: 0 auto;
+    padding: 10px;
+    border: grey solid 1px;
+    border-radius: 5%;
+    background-color:rgba(236, 236, 236, 0.8) ;
+}
+
