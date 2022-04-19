@@ -33,11 +33,11 @@
                 <br/>
 
                 <label for="birth">Date of Brith </label>
-                <input type="text" name="birth" id="birth" required>
+                <input type="date" name="birth" id="birth" required>
                 <br/>
 
                 <label for="death">Date of Death </label>
-                <input type="text" name="death" id="death">
+                <input type="date" name="death" id="death">
                 <br/>
 
                 <button type="submit">Submit</button>
