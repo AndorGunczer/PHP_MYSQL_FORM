@@ -13,8 +13,7 @@ $owner = $_POST['owner'];
 $species = $_POST['species'];
 $gender = $_POST['gender'];
 $birth = $_POST['birth'];
-$death = $_POST['death'];
-
+$death = $_POST['death'] ? "'$_POST[death]'" : "NULL";
 
 //Ein Versuch, eine Verbindung zur Datenbank herzustellen.
 $link = mysqli_connect($url, $user, $password, $db);
@@ -23,10 +22,10 @@ $link = mysqli_connect($url, $user, $password, $db);
 if($link === false){
     die("ERROR: Could not connect. " . mysqli_connect_error());
 }
- 
+
 // Attempt insert query execution
 // Versuch der Ausführung einer Insert-Abfrage
-$sql = "INSERT INTO pet (name, owner, species, gender, birth, death) VALUES ('{$name}', '{$owner}', '{$species}', '{$gender}', '{$birth}', '{$death}')";
+$sql = "INSERT INTO pet (name, owner, species, gender, birth, death) VALUES ('{$name}', '{$owner}', '{$species}', '{$gender}', '{$birth}', {$death})";
 if(mysqli_query($link, $sql)){
     echo "Records inserted successfully.";
 } else{
