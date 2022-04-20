@@ -28,8 +28,8 @@
                 <input type="text" name="species" id="species" required>
                 <br/>
 
-                <label for="gender">Gender </label>
-                <input type="text" name="gender" id="gender" required>
+                <label for="gender">Gender (f or m) </label>
+                <input type="text" name="gender" id="gender" pattern="^(f|m|F|M)$" required>
                 <br/>
 
                 <label for="birth">Date of Brith </label>
